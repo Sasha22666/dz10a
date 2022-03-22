@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Анимации</title>
+</head>
+
+<body>
+    <style>
+        div 
+        {
+          width: 700px;
+        }
+         p
+        {
+            width: 500px;
+            text-align: center;
+            background-color: aquamarine;
+            color: blue;
+            font-size: 40px;
+            animation: MyAnimation1 3s infinite;
+        }
+        
+        @keyframes MyAnimation1 
+        {
+            from { background-color: rgb(137, 146, 146); color: yellow }
+            50% {background-color: rgb(208, 224, 161); color: green}
+            to { background-color: rgb(197, 109, 117); color: white }
+        }
+       
+        div:hover img
+        {
+            transform: translate(500px,-80px);
+        }
+        div:hover p
+        {
+           transform: scale(1.1);
+        }
+        div:hover path
+        {
+            fill:aqua;
+            stroke: blue;
+            stroke-width: 3;
+            transform: rotate(-4deg);
+        }
+    </style>
+    <div>
+        <p>
+            Примеры анимации:
+        </p>
+
+        <img src="biohazard.png">
+
+        <svg width="400" height="300" xmlns="http://www.w3.org/2000/svg">
+            <g>
+             <rect fill="#fff" id="canvas_background" height="302" width="302" y="-1" x="-1"/>
+             <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%">
+              <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+             </g>
+            </g>
+            <g>
+             <path d="m9.49999,118.28977l108.8611,0l33.63892,-108.09667l33.63894,108.09667l108.86108,0l-88.07032,66.80665l33.64066,108.09667l-88.07035,-66.80847l-88.07034,66.80847l33.64067,-108.09667l-88.07034,-66.80665z"
+              stroke-width="2" stroke="#000" fill="#AF84A3"/>
+            </g>
+           </svg>
+    </div>
+
+</body>
+
+</html>
